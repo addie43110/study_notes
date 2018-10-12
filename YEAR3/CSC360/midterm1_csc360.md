@@ -1,7 +1,7 @@
 # Study notes for CSC 360 Midterm 1
 
 ## Part 1: Review of computer organization
-1. [Computer organization] (#1-computer-organization)
+1. [Computer organization] (#computer-organization)
 2. CPU
 3. Memory
 4. I/O
