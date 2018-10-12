@@ -7,7 +7,7 @@
 4. I/O
 5. Different architectures
 
-### 1. Computer organization
+### Computer organization
 TODO: Add diagram
 
 ### 2. CPU (Central Processing Unit)
