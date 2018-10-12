@@ -63,3 +63,7 @@ More ideas:
     - when the clerk is idle, we send a signal to a queue
     - the queue wakes up the customers and then decides which customer is at the head of the queue, then sends a signal back to the clerk
   - this seems like a really complicated way of doing it
+
+
+# Next week
+Next week, we might get a file with Huang's ideas.
