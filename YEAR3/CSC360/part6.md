@@ -1,22 +1,22 @@
 # Part 6: Inter-process communication (IPC)
 
 ## 1. Why do we need IPC?
-TODO: add diagram
+![fork](images/fork.png)
 Any process cannot write something out to another process' memory space, but sometimes, child and parent want to do something together
 
 ## Bounded buffer (producer-consumer problem)
-TODO: add diagram
+![bounded buffer](images/bounded_buffer.png)
 
 ## 2. Shared memory vs message passing
 
 ### Shared memory
-TODO: add diagram
+![shared memory](images/shared_memory.png)
   - useful if the size of the data is big
   - OS allocates a dedicated memory space for IPC
   - shared memory in user space but managed by the kernel
 
 ### Message passing
-TODO: add diagram
+![message passing](images/message_passing)
   - say process A wants to send a message to B
   - mail goes from A to the kernel and then from the kernel to B
   - mail is stored in kernel in a "message queue"

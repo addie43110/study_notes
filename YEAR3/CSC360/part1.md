@@ -6,7 +6,7 @@
 5. [Different architectures] (#5-different-architectures)
 
 ## 1. Computer organization
-TODO: Add diagram
+![computer organization](images/architecture_20181013_0001.png)
 
 ## 2. CPU (Central Processing Unit)
   - made up of:
@@ -19,7 +19,8 @@ TODO: Add diagram
 
 ## 3. Memory
 * Note that network storage is difficult to compare right now. It is normally slower, but in the future, it could easily be faster than a CD.
-TODO: Add diagram
+![memory](images/memory.png)
+![main memory] (images/main_memory.png)
 
 
 ## 4. Input/Output
@@ -28,7 +29,7 @@ TODO: Add diagram
   - need to know if we're using interrupts or DMA (direct memory access)
 
 ### 4.2 Synchronous vs asynchronous
-TODO: add diagram
+![synchronous vs asynchronous](images/synch_vs_asynch_20181013_0001.png)
 
 ### 4.3 Interrupt vs trap
   - interrupt: external control stops a process

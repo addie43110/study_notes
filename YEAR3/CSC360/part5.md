@@ -30,7 +30,7 @@ Note that _all_ PCB information is always stored in kernel space, even if the pr
   - waiting 
   - terminated
 
-TODO: add diagram
+![process states](images/process_state.png)
 Above: after a scheduled time block (eg. 100ms), the process running is interrupted to run other processes.
 If process ness I/O, it goes into waiting state until it has I/O completion.
 
@@ -38,7 +38,7 @@ If process ness I/O, it goes into waiting state until it has I/O completion.
 - explore `% cd /proc` with `inf.c`
 
 ## 4. Context switch
-TODO: add diagram
+![context switch](images/context_switch.png)
 
 ## 5. Process scheduling
 ### 5.1 Queueing system
@@ -80,7 +80,7 @@ Q. How are resources allocated to a child process?
 A. No standard answer - this depends on OS.
 
 1. The child process may obtain its resources directly from the OS (case of Linux/Unix)
-    - TODO: add diagram
+    - ![unix system resources](images/system_resources.png) 
     - note that `fork()` means:
       - CPU creates a new child process (P1-1) an copies everything over to this new process; the new process gets its own PCB
 
@@ -89,7 +89,7 @@ A. No standard answer - this depends on OS.
 
 ## 6.3 Examples
 `fork()` example:
-TODO: add diagram
+![fork example](images/fork_example.png)
 
 # 7. Process termination
   - terminates itself with `exit()`

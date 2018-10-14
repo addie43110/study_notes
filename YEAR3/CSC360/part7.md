@@ -1,6 +1,7 @@
 # Part 7: Threads
 
 ## 1. What are threads?
+![threads](images/threads.png)
   - reduce the number of context switches (which are costly and waste CPU time)
   - every thread has its own running environment
     - own stack
@@ -20,7 +21,7 @@ Q. Is there any way to designment more CPU time to a specific thread? There is, 
 If we link a kernel thread to user thread, we can implicitly control how much time is given to the user thread. This is highly OS dependent.
 
 ## 3. Thread model: How Solaris implements threads
-TODO: add diagram
+![solaris thread model](images/solaris.png)
 
 ### Light-weight process (LWP)
   - an intermediate data structure between user threads and kernel threads
@@ -28,7 +29,7 @@ TODO: add diagram
 
 ### Example
 Assume the system has only 1 physical CPU. Assume we have 3 kernel threads and a CPU Round-Robin (take turn) schedule. The user space has three processes such that P1 has three threads, P2 has 2 threads, and P3 has one thread. Each process has one LWP which also uses Round-Robin. Thus, P1 threads each get 1/9 CPU time, P2 threads each get 1/6 CPU time and the P3 thread gets 1/3 CPU time.
-TODO: add diagram
+![solaris example](images/solaris_example.png)
 
 ## 4. Thread issues
 Q. What happens when a thread calls `fork()`?
