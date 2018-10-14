@@ -60,3 +60,27 @@ The `exec()` family of functions replaces the current process image with a new p
 
 ## Return values
 The `exec()` functions return only if an error has occurred. Return value is -1.
+
+
+# `pthread_create()`
+```c
+int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void*), void *arg);
+```
+
+`pthread_create()` creates a new thread, with attributes specified by `attr`, within a process. If `attr` is `NULL`, the default attributes are used. `thread` is just a `pthread_t` where `pthread_create()` can store the ID of the thread.
+
+
+## Return values
+  - 0 if successful
+  - error number if error
+
+# `pthread_join()`
+```c
+int pthread_join(pthread_t thread, void **value_ptr);
+```
+
+`pthread_join()` suspends execution of the calling thread until the target thread terminates, unless the target thread has already terminated. Here, `thread` is the actual value and not the pointer! The value given to the `pthread_exit(#)` will be made available to the `value_ptr` argument.
+
+## Return values
+   - 0 if successful
+   - error number if error 
