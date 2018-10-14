@@ -1,9 +1,9 @@
 # Part 1: Review of computer organization
-1. [Computer organization] (#1-computer-organization)
-2. [CPU] (#2-cpu-central-processing-unit)
-3. [Memory] (#3-memory)
-4. [I/O] (#4-inputoutput)
-5. [Different architectures] (#5-different-architectures)
+1. Computer organization
+2. CPU
+3. Memory
+4. I/O
+5. Different architectures
 
 ## 1. Computer organization
 ![computer organization](images/architecture_20181013_0001.png)

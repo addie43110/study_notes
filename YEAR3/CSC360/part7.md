@@ -16,6 +16,7 @@ Q. Is there any way to designment more CPU time to a specific thread? There is, 
 
 ### 1.1 Motivation and benefit
   - if we create a thread instead of a forking to create a new process, we only have 1 PCB
+![contrained](images/constrained.png)
 
 ## 2. User threads vs kernel threads
 If we link a kernel thread to user thread, we can implicitly control how much time is given to the user thread. This is highly OS dependent.
@@ -32,7 +33,7 @@ Assume the system has only 1 physical CPU. Assume we have 3 kernel threads and a
 ![solaris example](images/solaris_example.png)
 
 ## 4. Thread issues
-Q. What happens when a thread calls `fork()`?
+Q. What happens when a thread calls `fork()`? <br/>
 A. Either all threads are copied, or it will only copy the calling thread. This depends on the OS.
 <br/>
 If you are running Solaris (before version 10) and use Solaris threads API (instead of POSIX thread API), `fork()` will duplicate ALL threads in the process. But OS provides another function, `fork1()` to duplicate the calling thread only.
@@ -40,7 +41,7 @@ If you are running Solaris (before version 10) and use Solaris threads API (inst
 If you are using the POSIX thread API, no matter whether `fork()` is called in the process of in the thread, only one thread will be copied into a new process.
 
 ### Signal handling
-Q. Where should a signal be delivered?
+Q. Where should a signal be delivered? <br/>
 A. Options
   - deliver the signal to the thread to which the signal applies
   - deliver the signal to every thread in the process

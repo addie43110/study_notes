@@ -1,7 +1,6 @@
 # Part 6: Inter-process communication (IPC)
 
 ## 1. Why do we need IPC?
-![fork](images/fork.png)
 Any process cannot write something out to another process' memory space, but sometimes, child and parent want to do something together
 
 ## Bounded buffer (producer-consumer problem)
@@ -65,6 +64,14 @@ shmctl(shmid, IPC_RMID, NULL);
 Call this in client or server to destroy memory space if no one else is going to use it
   - `IPC_RMID`: remove the shared memory segment specified by shmid and destroy the data associated with it
   - returns 0 if successful, -1 if error
+
+```c
+int shmdt(const void *shmaddr);
+```
+`shmdt()` detaches the shared memory segment located at the address specified by _shmaddr_ from the address space of the calling process
+  - the to-be-detached segment must be currently attached with _shmaddr_ equal to the value returned by the attaching `shmat()` call
+  - if successful, returns 0. returns -1 if error
+
 
 ```
 ipcrm -m shmid

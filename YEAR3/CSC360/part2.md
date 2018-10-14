@@ -1,7 +1,7 @@
 # Part 2: Overview of Operating Systems
-1. [History] (#1-history)
-2. [Batch processing vs time sharing] (#2-batch-processing-vs-time-sharing)
-3. [Main tasks of OS] (#3-main-tasks-of-os)
+1. History
+2. Batch processing vs time sharing
+3. Main tasks of OS
 
 ## 1. History
   - requirements change

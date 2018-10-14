@@ -31,7 +31,7 @@ Note that _all_ PCB information is always stored in kernel space, even if the pr
   - terminated
 
 ![process states](images/process_state.png)
-Above: after a scheduled time block (eg. 100ms), the process running is interrupted to run other processes.
+Above: after a scheduled time block (eg. 100ms), the process running is interrupted to run other processes. <br/>
 If process ness I/O, it goes into waiting state until it has I/O completion.
 
 ## 3. PCB
@@ -76,13 +76,14 @@ Medium-term scheduler:
 Use the command `% pstree` to see a tree of all processes
 
 ## 6.2 Resource sharing
-Q. How are resources allocated to a child process?
+Q. How are resources allocated to a child process? <br/>
 A. No standard answer - this depends on OS.
 
 1. The child process may obtain its resources directly from the OS (case of Linux/Unix)
     - ![unix system resources](images/system_resources.png) 
     - note that `fork()` means:
       - CPU creates a new child process (P1-1) an copies everything over to this new process; the new process gets its own PCB
+      - ![fork](images/fork.png)
 
 2. The child process is constrained to a subset of resources of the parent process
 
