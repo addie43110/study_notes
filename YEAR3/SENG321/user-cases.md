@@ -33,5 +33,5 @@
 
 ## "Include" relationship
   - functionality that is repeated in more than 2 use cases can be factored out into a separate use case
-  - use syntax: "include <use case name>
+  - use syntax: "include [use case name]
   - the included use case is a standalone usecase, complete with its own alternative flows, if applicable
