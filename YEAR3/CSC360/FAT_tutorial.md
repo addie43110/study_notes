@@ -68,7 +68,7 @@ Correspond to each cluster in the data sector.
     - etc.
 
 ## Example
-![FAT example][images/FAT_example.png]
+![FAT example](images/FAT_example.png)
 
 #FAT Packing
   - the space on a floppy disk: 1.44Mbytes
