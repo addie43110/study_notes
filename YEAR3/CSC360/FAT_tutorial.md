@@ -8,17 +8,17 @@ Can be divided into four sectors (roughly)
   3. Root directory (sectors 19-32)
   4. Data area (sectors 33-2879)
 
-##Root directory
+## Root directory
 Can store files (pure files, subdirectories). Each are represented by a directory entry.
 
-##FAT tables
+## FAT tables
 Correspond to each cluster in the data sector.
   - the index of all the content in your file system
   - composed of a number of FAT entries
   - each FAT table contains 9 sectors
   - each FAT entry is 12 bits
 
-###FAT entries
+### FAT entries
 | Value | Meaning|
 | ------ | ------ |
 | 0x00 | Unused |
@@ -32,7 +32,7 @@ Correspond to each cluster in the data sector.
   - the value of FAT entry for the first cluster should be the third cluster (3), as it should point to the next cluster of the file
   - note that FAT entries at positions 0 and 1 are reserved, so we start counting from 2 (but FAT at position 2 still corresponds to sector 2).
 
-##Boot sector
+## Boot sector
   - contains basic disk information
     - how many copies of FAT tables (here it is 2)
     - boot sector is exactly 512 bytes
@@ -41,7 +41,7 @@ Correspond to each cluster in the data sector.
       - takes into account all four parts
     - may need to print out boot signature, volume id, volume label for next assignment
 
-##Directories
+## Directories
   - includes the root directories
   - in each directories, we store subdirectories or pure files
   - each sector of a directory contains 16 directory entries (each of which is 32 bytes long)
@@ -70,7 +70,7 @@ Correspond to each cluster in the data sector.
 ## Example
 ![FAT example](images/FAT_example.png)
 
-#FAT Packing
+# FAT Packing
   - the space on a floppy disk: 1.44Mbytes
   - number of bytes in a sector = 512
   - number of sectors in 1.44 Mbytes = x -> 2812
