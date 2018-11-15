@@ -8,10 +8,10 @@
 - total size of the disk (total sector count: byte 19, multiplied by 512; or find how many bytes per sector in bytes 11-12)
 - free size of the disk (rely on FAT entries; if value of fat entry == 0x00, then empty sector) 
 - number of files on the disk (including all files in the root directory and files in all subdirectories) (go through root directory sectors 19 - 32, skip if director entry:
-- value of attribute field (byte 11) is 0x0F
-- 4th bit of attribute field (subdirectory bit) is 1
-- volume label bit of attribute field (bit 3) is 1
-- directory entry is free, 6th or 7th bit is 1
+  - value of attribute field (byte 11) is 0x0F
+  - 4th bit of attribute field (subdirectory bit) is 1
+  - volume label bit of attribute field (bit 3) is 1
+  - directory entry is free, 6th or 7th bit is 1
 - number of FAT copies (boot sector, byte 16)
 - sectors per FAT (boot sector, byte 22-23)
 
