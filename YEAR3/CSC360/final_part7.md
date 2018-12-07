@@ -148,10 +148,12 @@ Hash table
   - need to keep track of process ID
 
 **Logical address**
+
 | process id | page | offset | 
 
 
 **Page table**
+
 | process id | page |
 
 - present the page table with a page number and pid
@@ -162,6 +164,8 @@ Hash table
 ## Some example questions
 Assume a system has a 32-bit virtual memory address-space and a page size of 2048 bytes. At a time _t_, a process _p_ has the following page table in the format (page, frame).
 
+| page | frame |
+|---|---|
 | 0 | 4 |
 | 2 | 6 |
 | 3 | 2 |
