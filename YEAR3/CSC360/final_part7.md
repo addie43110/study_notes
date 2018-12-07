@@ -65,7 +65,7 @@ Note: the TLB has two sections in it, one for page number and one for frame numb
 **TLB**
 
 | p | f |
----------
+|---|---|
 | 2 | 0 |
 | 4 | 1 |
 | 5 | 2 |
@@ -75,7 +75,7 @@ Note: the TLB has two sections in it, one for page number and one for frame numb
 **Page table**
 
 | frame |
----------
+|------|
 | 8 |
 | 4 |
 | 0 |
