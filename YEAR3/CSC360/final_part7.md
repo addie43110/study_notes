@@ -23,7 +23,7 @@ Programmers think about their programs as a bunch of segments existing somewhere
 
 Each segment has a name and a length. Thus, a logical address consists of a two tuple:
 
-<p align="center"> \<segment-number, offset\> </p>
+<p align="center"> \<segment-number, offset> </p>
 
 ### Back to paging...
 Segmenetation allows the physical address space of a program to be non-contiguous. The basic method for paging involves breaking physical memory into fixed-sized blocks called framges. Similarly, we break the logical memory into blocks of the same size called pages.
