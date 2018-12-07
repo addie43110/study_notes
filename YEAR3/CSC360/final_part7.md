@@ -25,7 +25,7 @@ Each segment has a name and a length. Thus, a logical address consists of a two 
 
 <p align="center"> &lt;segment-number, offset&gt; </p>
 
-### Back to paging...
+### Translate logical address to physical address
 Segmenetation allows the physical address space of a program to be non-contiguous. The basic method for paging involves breaking physical memory into fixed-sized blocks called framges. Similarly, we break the logical memory into blocks of the same size called pages.
 
 When a process is to be executed,
@@ -36,3 +36,56 @@ Every logical address is divided into two parts:
   2. a page offset
 
 The **page number** is used as in index for the **page table**. For example, a page number of 3 would correspond to entry 3 of the page table, or `page_table[3] = f` where f is the corresponding frame.
+
+The page size is defined by hardware. The size of a page is a power of 2 and depends on computer architecture.
+
+- if the size of the logical address space is 2<sup>m</sup> and a page size is 2<sup>n</sup> bytes, then the address is as follows
+
+![logical address](images/logical_address.png)
+
+- _p_ is an index to the page table and _d_ is the displacement within the page
+
+### Support for the page table (TLB)
+- when a page table is very small, the OS can use _registers_ to store the page table (very fast)
+- when a page table is big, the OS usually uses main memory to store the page table (slow)
+  - pointer to page table in the OS kernel
+  - thus, for one address, we need to do 2 main memory accesses
+    - one for the page table (find the frame in the page table)
+    - another to go to that frame 
+    - this is quite slow!
+- use a special, small, fast look-up table called the Translation Lookaside Buffer (which is on special hardware located in the motherboard)
+
+How to use TLB
+  1. Search the TLB for the page
+  2. If miss, must look in the page table (2 memory access + 1 TLB time)
+  3. If hit, got to frame in main memory (1 TLB + 1 main memory access time)
+
+Note: the TLB has two sections in it, one for page number and one for frame number (unlike the page table).
+
+**TLB**
+
+| p | f |
+---------
+| 2 | 0 |
+| 4 | 1 |
+| 5 | 2 |
+| 6 | 3 |
+| 1 | 4 |
+
+**Page table**
+
+| frame |
+---------
+| 8 |
+| 4 |
+| 0 |
+| 7 |
+| 1 |
+
+### An example question
+Assume that it takes 100ns to access main memory. Assume the TLB lookup time takes 10ns. Define the effective memory access time as the expected time needed to find the physical address for a logical address.
+
+Q: What is the hit rate for the TLB such that the effective memory access time is 150 ns?
+A: 60%
+
+
