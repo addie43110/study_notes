@@ -163,7 +163,7 @@ Hash table
 Assume a system has a 32-bit virtual memory address-space and a page size of 2048 bytes. At a time _t_, a process _p_ has the following page table in the format (page, frame).
 
 | 0 | 4 |
-|2 | 6 |
+| 2 | 6 |
 | 3 | 2 |
 | 8 | 5 |
 | 10 | 3 |
@@ -284,7 +284,7 @@ Causes:
   - and this repeats
 
 Thrashing highly related to the degree of multiprogramming
-![CPU utilization vs the degree of multiprogramming](images/thrashing-multiprogramming)
+![CPU utilization vs the degree of multiprogramming](images/thrashing-multiprogramming.png)
 
 ## Allocation for kernel memory: the buddy system
 
