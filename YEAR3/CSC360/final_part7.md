@@ -284,6 +284,7 @@ Causes:
   - and this repeats
 
 Thrashing highly related to the degree of multiprogramming
+
 ![CPU utilization vs the degree of multiprogramming](images/thrashing-multiprogramming.png)
 
 ## Allocation for kernel memory: the buddy system
