@@ -36,12 +36,12 @@ CPU scheduling is a mechanism which consists of 2 modules:
   4. Round-robin
     - run each job for a set amount of time
   5. Multi-level queue
-    - multiple priority queues which each receive a different percent of CPU time allocation
+    - multiple priority queues which each receive a different percent of CPU time allocation </br>
     - ![multilevel queue](images/multilevel-queues.png)
     - could be preemptive: no lower priority process can run until higher priority queues are empty
     - could be time slice: eg. system processes gets 80% of CPU time while student processes only gets 5%
   6. Multi-level feedback queue
-    - can be preemptive or non-preemptive
+    - can be preemptive or non-preemptive </br>
     - ![multi-level feedback queue](images/multilevel_feedback_queue.png)
     - idea: separate processes according to the length of their CPU bursts
     - if a processes uses too much CPU time, it will be moved to a lower-priority queue
