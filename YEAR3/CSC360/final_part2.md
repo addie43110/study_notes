@@ -16,6 +16,13 @@ On failure:
   - no child process created
   - errno is set
 
+### Resource sharing
+How are resources allocated to a child process?
+  - it depends on the OS
+  - the child process may obtain its resources directly from the OS (gets a new PCB)
+  - the child process may be constrained to a subset of resources of the parent process (does not get a new PCB)
+
+
 ## `wait()`
 ```c
 pid_t wait (int *status);
@@ -54,6 +61,9 @@ On success:
 On failure:
   - returns -1
 
+### Note
+If you call `wait()` and the child process has already returned, then `wait()` gets the return value of the terminated child immediately.
+
 
 ## `kill()`
 
@@ -89,9 +99,23 @@ int execle(const char *path, const char *arg, ..., char *const envp[]);
 int execv(const char *path, char *const argv[]);
 int execvp(const char *file, char *const argv[]);
 int execvpe(const char *file, char *const argv[], char *const envp[]);
+```
 
 The `exec()` family of functions replaces the current process image with a new process image.
-```
+
+`exec*()` tells the OS kernel to replace the current program with a new program. The kernel roughly:
+  1. Saves a copy of the new argv array and a copy of the environment
+  2. Frees any private memory area
+  3. Disconnects the process from any shared memory including a shared text segment and any shared libraries
+  
+At this point, any code following the `exec()` call no longer exists in the process. The same is true for any code prior to the `exec()` call and even the `exec()` call itself. It's all gone!
+
+  4. Reads in the exec'ed program and reconstructs a working program. The environment and the arguments are copied into the new program
+  5. Inherits the attributes from the calling process (ie. PID, PPID, NICE, etc...)
+  6. Transfers control to the newly created program
+
+
+
 
 ### Return values
 The `exec()` functions only return if an error has occurred. The return value is -1.
