@@ -86,4 +86,9 @@ Lastly:
 - note: flyweight objects must be _immutable_ so they can be shared throughout the program
 
 ## Singleton Design Pattern
-
+- problem: there should only be one instance of an object at any given time
+  - think: only one person named Bob at any given time. Should not allow any other instances of people named Bob.
+- solution:
+  - use a private constructor so clients cannot create duplicate objects
+  - static final field keeping a reference to the single instance of the singleton object
+  - static accessor method (usually called `instance()` that returns the instance of the Singleton
