@@ -9,8 +9,8 @@
 - [ ] object diagrams
 
 ## Definitions
-**TERM** | **DEFINITION**
-===|===
+|**TERM** | **DEFINITION** |
+| === | === |
 encapsulation | encapsulate data and computations to protect them from corruption and to simplify design
 information hiding | only show a client information that is necessary for the client's task and hide all remaining information
 design space | imaginary space where each dimension corresponds to a design quality attribute (eg. understandability, reusability, ease of implementation, etc.)
@@ -162,6 +162,6 @@ So, I suppose we return: `return new Card(cardWeWantToCopy);`
   - references denoted by arrows
 - represent a snapshot in time of the execution of the program
 
-![object diagram](images/m01-objectdiagram.png)
+![object diagram](images/m01-objectDiagram.png)
 
 
