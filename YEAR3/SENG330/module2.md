@@ -205,6 +205,7 @@ Example:
 public class Desk implements Iterable<Card> {
   public Iterator<Card> iterator() { ... }
 }
+```
 
 - iterator can be used in java `forall` loops
 - this is `for(String s : list)` syntax
