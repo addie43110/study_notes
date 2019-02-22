@@ -2,7 +2,7 @@
 
 ## Components
 Component | Shape
------
+---- | ---- 
 Entity sets | rectangle
 Attributes | oval
 Relationships | diamond
