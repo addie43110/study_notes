@@ -1,4 +1,4 @@
-# Interaction Design
+## Interaction Design
 
 ## What is interaction design?
 - designing interactive products to support people in their everyday working lives
