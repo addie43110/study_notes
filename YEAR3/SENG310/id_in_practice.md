@@ -18,6 +18,22 @@
 - user research: data collection and analysis in shorter time frames (sprint, timebox, cycle)
 - lean UX
 - minimum viable product is a key concept
+- Big design upfront (BDUF) is anathema to agile working.
+- to co-locate or not to co-locate
 
-Big design upfront (BDUF) is anathema to agile working.
+## Documentation
+- capture and communicate design through documentation
+  - user research results
+  - personas
+  - detailed interface sketches
+- agile: minimal documentation, focus on design and working product
+- slack vs. email
+
+## Design patterns
+- proposed by Christopher Alexander
+- ex. inner courtyard
+- describes a problem, solution, and where this solution has been found to work
+
+### Model-view-control
+- originally introduced in SmallTalk
 
