@@ -24,4 +24,21 @@ LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 ```
 
+## Entities and Architextures
+Entity
+- primary hardware abstraction
+- provides: entity name, inputs and outputs
+- analogous to a symbl in a block diagram
 
+Architecture
+- specifies relationships between inputs and outputs
+- may be a mixture of structural, concurrent and sequential VHDL
+- a given entity may have multiple, different architectures
+
+### Entity declarations
+```vhdl
+ENTITY hfadder IS
+  PORT (X, Y: IN BIT;
+        Sum, Carry: OUT BIT);
+END ENTITY hfadder;
+```
