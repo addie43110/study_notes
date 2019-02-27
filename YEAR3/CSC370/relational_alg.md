@@ -77,9 +77,9 @@ psi (re)name of relation( attributes ) (original relation R)
 
 
 ## Last problem
-Product (maker, model, type)
-PC (model, speed, ram, hd, rd, price)
-Laptop (model, speed, ram, hd, screen, price)
+Product (maker, model, type)<br/>
+PC (model, speed, ram, hd, rd, price)<br/>
+Laptop (model, speed, ram, hd, screen, price)<br/>
 Printer (model, colour, type, price)
 
 1. Which PC models have a speed of at least 1000?
