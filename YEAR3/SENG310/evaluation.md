@@ -140,7 +140,7 @@ First rule of usability: don't listen to users.
 - recruiter
 - the lone evaluator
 
-#### Prepare ask descriptions
+#### Prepare task descriptions
 - generate task descriptions for each use case
 - create task cards, one for each task
   - simply a card with the task description on it that you can show the participant
@@ -148,7 +148,7 @@ First rule of usability: don't listen to users.
 Here's an example task description:<br/>
 Assume you are planning a road trip that will take about 2 hours each way and you'd like to create a playlist on Spotify's desktop app that you can access on your phone while driving. You'd like a mix of songs from you current library and new discoveries. Please create a playlist that is long enough to occupy your time while driving.
 
-#### Create evaluation scrip
+#### Create evaluation script
 - it will be used to guide the facilitator
 - ensures that all participants receive the same information, especially with different facilitators
 - how detailed a script you use depends on how important it is to control the interactions
