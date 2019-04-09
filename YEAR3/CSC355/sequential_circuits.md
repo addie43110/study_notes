@@ -43,3 +43,31 @@ Put the state table on a K-Map to determine the Q+ (characteristic) equation. He
 Inputs must wait until clock is 1 before they can be passed onto the rest of the circuit. When clock is 0, S and R are both 0 (state of the circuit is held)
 
 If you make the SR latch with NAND gates instead of NOR gates, it changes it to an active low (low control) circuit. Thus, S and R are active when they are 0 instead of 1. Undefined behaviour when S and R are both 0.
+
+## Toggle T Latch
+- T = 0 , no change
+- T = 1 , flip state
+
+State Table
+
+T | Q | Q+
+--- | --- | ---
+0 | 0 | 0
+0 | 1 | 1
+1 | 0 | 1
+1 | 1 | 0
+
+Characteristic Equation:</br>
+Q+ = !TQ + T!Q = T XOR Q
+
+![t latch](t_latch.png)
+
+## D Latch
+- Transfers data into a latch after clock pulse
+- characteristic equation:
+  - Q+ = D
+
+You can also build the D Latch from an SR flip flop.
+
+## JK Latch
+- combination of SR and T latches so that it eliminates any invalid inputs.
