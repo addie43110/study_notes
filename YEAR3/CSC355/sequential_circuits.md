@@ -94,3 +94,53 @@ T: Q+ = !TQ + T!Q
 J-K: Q+ = !KQ + J!Q
 
 D: Q+ = D
+
+## Master Slave JK Flip Flop
+![masterslave](images/master-slave.png)
+
+- before there were edge-triggered flip flops, people used master-slave flip flops
+  - this protected against sudden changes in the input while the clock was still high
+- when CLK = 1, only the master can operate
+- when CLK = 0, only the slave can operate
+- one is always isolated (in hold state)
+- not that Q1 changes at the clock's raising edge while Q2 changes at the clock's falling edge
+  - that is, master operates at raising edge
+  - slave operates at falling edge
+- output (Q) is read at falling edge
+
+The synchronous JK Flip flop
+![synchjk](images/synchjk.png)
+
+## Synchronous FF with Direct (Asynchonous Inputs: Preset and Clear)
+- at power up, reset all or part of circuit
+  - this initialization usually happens outside of clocked behaviour (aka asynchronous)
+
+## Edge-triggered D flip-flop
+- formed by either
+  - replacing the first clocked S-R latch with a clocked D latch
+  - adding a D input and inverter to a master-slave S-R flip flop
+- the change of the D flip-flop output is controlled by the negative (falling) edge of the clock
+
+![negatived](images/negatived.png)
+
+You can make a positive-edge triggered D flip-flop by inverting the clock for the D latch.
+
+![positived](images/positived.png)
+
+## Latches vs Flip Flops
+Type | Inputs Sampled | Outputs Valid After
+--- | --- | ---
+Unclocked latch | always | delay from input change
+Level sensitive latch | clock high | delay from input change 
+Positive edge flip-flop | When clock lo-to-hi | delay from rising edge
+Negative edge flip-flop | When clock hi-to-lo | delay from trailing edge
+Master/slate flip-flop | On rising edge | delay from trailing edge
+
+## Extras
+- because changes have to wait for the clock pulse, this makes the circuit slower
+- inputs can change when the clock is 1
+  - this is called "One's catching"
+  - can cause timing problems
+- avoid using edge-triggering instead of latches or master-slave or vice versa
+  - do not mix and match
+- an edge-triggered flip-flop ignores the clock pulse while it is at a constant level and triggers only during a transition of the clock signal
