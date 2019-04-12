@@ -85,4 +85,12 @@ To build the JK Latch from the SR Latch
 
 ![jkfromsr](images/jkfromsr.png)
 
+## Characteristic Equations
 
+S-R: Q+ = !RQ + S  (SR=0)
+
+T: Q+ = !TQ + T!Q
+
+J-K: Q+ = !KQ + J!Q
+
+D: Q+ = D
