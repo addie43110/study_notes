@@ -71,3 +71,18 @@ You can also build the D Latch from an SR flip flop.
 
 ## JK Latch
 - combination of SR and T latches so that it eliminates any invalid inputs.
+- when J and K = 0, stable (no change)
+- when JK=1, toggle
+- when J xor K, it acts like the SR
+
+Characteristic Equation:</br>
+Q+ = !KQ + J!Q
+
+To find the characteristic equation, simply may out JK and Q on a Kmap and circle to minimize the expression for Q+.
+
+To build the JK Latch from the SR Latch
+- add 2 3-input AND gates connected to J, K, Q+ and the clock
+
+![jkfromsr](images/jkfromsr.png)
+
+
