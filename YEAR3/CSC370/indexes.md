@@ -62,7 +62,7 @@ To avoid repeating keys in an index, use a level of indirection, called buckets.
 ## BTrees
 - deletions and insertions are problematic for flat indexes
 - eventually, we need to reorganize entries and records
-  - this is where BTrees come int!
+  - this is where BTrees come in!
 
 ### Insertion
 - we try to find a plae for the new key in the appropriate leaf, and we put it there if there is room
